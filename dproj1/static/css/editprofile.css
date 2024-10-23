@@ -1,0 +1,271 @@
+* {
+    font-family: "Outfit", sans-serif;
+}
+.top-nav {
+    background-color: #000;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+.top-nav .social a {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+.top-nav .social a:hover {
+    color: #fff;
+}
+.top-nav p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 20px; 
+    color: #fff;
+    font-size: 18px;
+}
+.top-nav p i {
+    margin-right: 5px; 
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5cb85c;
+    padding-left: 61px;
+}
+.navbar-brand span {
+    color: #d9534f;
+}
+#bar:hover a {
+    color: #5cb85c;
+}
+.header-content {
+    text-align: center;
+    padding: 100px 20px;
+    background: #f8f9fa;
+}
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.header-content .btn {
+    margin: 20px 10px;
+}
+.icon {
+    margin: 0 10px;
+    color: #fff;
+}
+.nav-link {
+    margin-left: 30px;
+    padding: 5px;
+    font-size: 17px;
+    color: #000;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 101px;
+    z-index: 1;
+}
+.dropdown-content div {
+    color: #000;
+    padding: 5px 27px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content div:hover {
+    background-color: #e9ecef;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn {
+    color: #000;
+    background-color: #fff;
+    border: none;
+    margin-right: 40px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 19px;
+    margin-top: 5px;
+    align-items: center;
+    padding-top: 20px;
+}
+#drop {
+    margin-top: -24px;
+    text-align: right;
+    list-style-type: none;
+}
+#navbarNav {
+    margin-left: 336px;
+}
+.required::after {
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
+#orderForm {
+    display: fixed;
+}
+#container {
+    width: 100%; 
+    max-width: 400px; 
+    min-width: 280px; 
+    padding: 20px; 
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top:20px;
+
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+label {
+    text-align: left;
+    display: block;
+    margin-bottom: 4px;
+}
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+}
+.form-control.is-invalid + .invalid-feedback {
+    display: block;
+}
+#cityDropdown, #stateDropdown {
+    display: none;
+    position: absolute;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ced4da;
+    z-index: 1000;
+    width: 100%;
+}
+#cityDropdown div, #stateDropdown div {
+    padding: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+#cityDropdown div:hover, #stateDropdown div:hover {
+    background-color: #e9ecef;
+}
+.form-row .form-group {
+    margin-bottom: 15px;
+}
+#fullName, #lastName, #number, #address, #city, #state, #post {
+    width: 100%;
+}
+#fullName, #lastName {
+    margin-right: 5px;
+}
+#post {
+    margin-left: -14px
+}
+#button {
+    width:100%;
+
+   
+}
+
+#sign{
+    width: 496px;
+    height: 445px
+}
+
+
+.heading{
+text-align:center;
+}
+.profile-image-container {
+width: 100px; 
+height: 100px; 
+overflow: hidden; 
+border-radius: 50%;
+position: relative;
+cursor: pointer;
+border: 2px solid #007bff; 
+margin: auto; 
+}
+
+.profile-image {
+width: 100%;  
+height: 100%; 
+object-fit: cover; 
+border-radius: 50%;
+}
+
+.camera-icon {
+position: absolute;
+bottom: 5px;
+right: 22px; 
+background: white; 
+border-radius: 50%; 
+padding: 2px; 
+border: 1px solid #007bff;
+font-size: 12px; 
+}
+
+#profile_image {
+display: none; 
+}
+.profile-image-container {
+position: relative;
+display: inline-block;
+}
+
+.profile-image {
+width: 100px; 
+height: 100px; 
+border-radius: 50%;
+object-fit: cover;
+}
+
+.camera-icon {
+position: absolute;
+bottom: 10px;
+right: 10px;
+background-color: white; 
+border-radius: 50%;
+padding: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.camera-icon:hover {
+background-color: #f0f0f0; 
+}
+
+.camera-icon i {
+color: #007bff; 
+font-size: 1.5rem; 
+}
+.dropdown {
+position: absolute;
+border: 1px solid #ccc;
+background-color: white;
+max-height: 150px;
+overflow-y: auto;
+z-index: 1000;
+display: none; 
+}
+
+.dropdown div {
+padding: 8px;
+cursor: pointer;
+}
+
+.dropdown div:hover {
+background-color: #f1f1f1; 
+}
+
+.is-invalid {
+border-color: red;
+}

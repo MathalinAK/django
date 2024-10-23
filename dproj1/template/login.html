@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+    <body>
+            <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 " >
+                            <img src="{% static 'asset/login1.png' %}" id="sign" alt="Registration Image">
+                        </div>
+                    
+                        
+                        <!--<div class="col-md-6">
+                            <div class="form">
+                                <form method="POST" action="process/" autocomplete="off">
+                                {% csrf_token %}
+                                <h1 class="login">login</h1>
+                                <label for="username" id="label"><b>Username:</b></label>
+                                <input class="form-control" type="text" id="name" name="username">
+                            <div class="eye">
+                                <label for="password" id="label"><b>Password:</b></label>
+                                <input class="form-control" type="password" id="name" name="password">
+                                <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+                            </div>
+
+                                <p class="paragraph">are you new to this page?<a href=> signup</a></p>
+                                <button type="submit" class="btn btn-primary" id="button">Submit</button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </body>
+    </html>-->
+    <!--<div class="col-md-6" id="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            {% if messages %}
+                <div>
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                    {{ message }}
+                        </div>
+                    {% endfor %}
+                        </div>
+                    {% endif %}
+            
+                        <form id="loginForm" method="POST" action="{% url 'login' %}">
+                            {% csrf_token %}
+                            <div class="textbox">
+                                <label for="email" id="label"><b>Email <span class="required">*</span></b></label>
+                                <input type="email" id="email" name="email" placeholder="exam@gmail.com" required>
+                            </div>
+                            <div class="textbox">
+                                <label for="password"id="label1"><b>Password <span class="required">*</span></b></label>
+                                <input type="password" id="password" name="password" placeholder="FX19Csr053@" required>
+                                <i class="fas fa-eye eye-icon" id="togglePassword"></i>
+                                <p class="new-user" id="forgot"><a href="forgot_password">forgot password?</a></p>
+                                
+                               
+                            </div>
+                            <button type="submit" class="btn">Login</button>
+                        </form>
+            
+                        <p class="new-userr">Don't have an account? <a href="{% url 'registerprocess' %}">Sign up</a></p>
+                       
+                    </div>
+                </div>
+            </div>-->
+            <div class="col-md-6" id="container">
+                <div class="login-box">
+                    <h2>Login</h2>
+                    {% if messages %}
+                        <div>
+                            {% for message in messages %}
+                                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+            
+                    <form id="loginForm" method="POST" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        <div class="textbox">
+                            <label for="email" id="label"><b>Email <span class="required">*</span></b></label>
+                            <input type="email" id="email" name="email" placeholder="exam@gmail.com" value="{{ email }}" required>
+                        </div>
+                        <div class="textbox">
+                            <label for="password" id="label1"><b>Password <span class="required">*</span></b></label>
+                            <input type="password" id="password" name="password" placeholder="FX19Csr053@" value="{{ password }}" required>
+                            <i class="fas fa-eye eye-icon" id="togglePassword"></i>
+                            <p class="new-user" id="forgot"><a href="forgot_password">Forgot password?</a></p>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                    </form>
+            
+                    <p class="new-userr">Don't have an account? <a href="{% url 'registerprocess' %}">Sign up</a></p>
+                </div>
+            </div>
+
+<script src="{% static 'js/login.js'%}"></script>    
+</body>
+</html>    
+            
+            

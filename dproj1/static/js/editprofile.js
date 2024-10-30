@@ -54,25 +54,32 @@ $(document).ready(function () {
         } else {
             alert('Please upload a valid image file.');
         }
+        $(document).ready(function () {
+const editProfileUrl = "{% url 'editprofile' %}"; 
+const profileUrl = "{% url 'profile' %}"; 
+
+$('#editProfileForm').on('submit', function(e) {
+    e.preventDefault(); 
+
+    const formData = new FormData(this); 
+
+    $.ajax({
+        url: editProfileUrl, 
+        method: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false, 
+
+        success: function() {
+          
+            window.location.href = profileUrl;
+        },
+        error: function(xhr) {
+            console.error("Error:", xhr);
+            alert('There was an error saving your changes.');
+        }
     });
-
-    $('#editProfileForm').on('submit', function(e) {
-e.preventDefault(); 
-
-const formData = new FormData(this); 
-$.ajax({
-url: "{% url 'editprofile' %}", 
-method: 'POST',
-data: formData,
-processData: false,
-contentType: false,
-success: function() {
-    window.location.href = "{% url 'profile' %}";
-},
-error: function() {
-    window.location.href = "{% url 'profile' %}";
-   
-}
 });
 });
 });
+})

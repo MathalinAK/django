@@ -200,9 +200,10 @@ class home1View(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 
     def get(self, request):
-        print("User authenticated:", request.user.is_authenticated)  
-        username = request.session.get('username', None)
-        return render(request, 'home1.html', {'username': username})
+        username = request.user.username
+        profile_image = request.user.profile_image.url if request.user.profile_image else None
+        return render(request, 'home1.html', {'username': username, 'profile_image': profile_image})
+
 
 class changepasswordView(LoginRequiredMixin, View):
     login_url = '/login/' 
@@ -247,6 +248,7 @@ class profileView(LoginRequiredMixin, View):
 
 class editprofileView(LoginRequiredMixin, View):
     login_url = '/login/' 
+
     def get(self, request):
         try:
             user_details = Persondetails.objects.get(email=request.user.email)
@@ -264,19 +266,18 @@ class editprofileView(LoginRequiredMixin, View):
             user_details.city = request.POST.get('city', '')
             user_details.state = request.POST.get('state', '')
             user_details.postal_code = request.POST.get('postal_code', '')
+
             if 'profile_image' in request.FILES:
                 user_details.profile_image = request.FILES['profile_image']
-                print("Profile image has been added.") 
-            else:
-                print("No profile image added.")  
 
             user_details.save()
-            #return redirect('profile') 
+            return redirect('profile') 
         except Persondetails.DoesNotExist:
-          #  return JsonResponse({"status": False, "error": "User details not found."})
-          return JsonResponse({"status":True,"error":str(e)})
+            return JsonResponse({"status": False, "error": "User details not found."})
         except Exception as e:
             return JsonResponse({"status": False, "error": str(e)})
+
+
 
 class logoutView(View):
     def get(self, request):

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> <!-- Include Bootstrap Icons -->
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Include Font Awesome -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+*{
+  font-family: "Outfit", sans-serif;
+}
+.html,body{
+  max-width:100%;
+  height:100px;
+}
+.html {
+  scrollbar-gutter: stable;
+}
+
+.top-nav {
+      background-color: #000;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      color:#ffffff;
+    }
+    .top-nav .social a {
+      margin-left: 10px;
+      color:#fff;
+      text-decoration: none;
+    }
+    .top-nav .social a:hover {
+      color: #fff;
+    }
+    .top-nav p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      margin-right: 20px; 
+      color:#fff;
+      font-size:18px;
+    }
+    .top-nav p i {
+      margin-right: 5px; 
+    }
+   
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #5cb85c;
+      padding-left: 61px;
+    }
+    .navbar-brand span {
+      color: #d9534f;
+    }
+    #bar:hover a{
+      color:#5cb85c;
+    }
+    .header-content {
+      text-align: center;
+      padding: 100px 20px;
+      background: #f8f9fa;
+    }
+    .header-content h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .header-content .btn {
+      margin: 20px 10px;
+    }
+    .icon {
+      margin: 0 10px;
+      color:#fff;
+    }
+    
+    .nav-link{
+      margin-left:30px;
+      padding:5px;
+      font-size:17px;
+      color:#000
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color:#fff;
+      min-width: 101px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color:#000;
+      padding: 5px 27px;
+      text-decoration: none;
+      display: block;
+      text-align:left;
+      /*font-family:'outfit','sans-serif';*/
+    }
+    .dropdown-content a:hover {
+      background-color:#5cb85c;
+      right:0;
+      text-align:right;
+    
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropbtn{
+      color:#000;
+      background-color: #fff;
+      border:none;
+      margin-right:40px;
+      font-family: 'outfit','sans-serif';
+      font-size:19px;
+      margin-top:5px;
+      align-items:center;
+      padding-top:20px;
+    }
+    #drop{
+      margin-top:-24px;
+      text-align:right;
+      list-style-type: none;
+    }
+    #box{
+        background-color: #DEF1BD;
+        width:853px;
+        height:350px;
+        margin-left:25px;
+        margin-top:9px;
+    }
+    #pome{
+    width: 422px;
+    height: 317px;
+    object-fit: contain;
+    margin-top: 40px;;
+    }
+    .heading{
+    text-align:right;
+    margin-top: -230px;
+    margin-right: 74px;
+    font-size:40px;
+    }
+    .heading2{
+        font-size:30px;
+        text-align:right;
+        margin-right:40px;
+    }
+    #box1{
+    width: 363px;
+    height: 357px;
+    margin-top: 5px;
+    margin-left:0px;
+    }
+    #chesse{
+    height: 361px;
+    width: 349px;
+    object-fit: contain;
+    }
+    #category{
+        width:100%;
+        object-fit:cover;
+        margin-top:5px;
+    }
+    
+    #column1{
+    width: 100%;
+    height: 427px;
+    margin-top: 46px;
+    background-color: #DEF1BD;
+    }
+    #image2{
+    width: 45%;
+    height: 82%;
+    margin-top: 39px;
+    object-fit: contain;
+    }
+    #heading1{
+    text-align: center;
+    margin-top: -30%;
+    margin-left: 45%;
+    }
+    .card{
+      box-shadow: 0 4px 8px 0 rgba(60, 58, 58, 0.2);
+      border: none;
+      align-items: center;
+      width: 80%;
+      height: 100%;
+      /* margin-bottom:50px; */
+    
+    }
+    #heads{
+      font-size:40px;
+      /* font-family: 'outfit','sans-serif'; */
+      margin-bottom: 40px;
+    }
+    .card-text{
+      font-size: 16px;
+      /* font-family:'outfit','sans-serif'; */
+    }
+   
+    .button{
+    width: 112px;
+    height: 37px;
+    font-size:15px;
+    color:rgb(255, 255, 255);
+    background-color: orange;
+    border-radius:16px;
+    /* font-family:'outfit','sans-serif'; */
+    /* border-color: orange; */
+    border: none;
+    display:inline-block;
+    }
+    .card-img-top{
+    width: 70%;
+    height:150px;
+    color: #c3c3c3;
+    object-fit: contain;
+    margin-top: 10px;
+
+    }
+    
+    .cart {
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 400px;
+            height: 100vh;
+            z-index: 100;
+            transition: right 0.3s ease;
+        }
+        .cart-content {
+            padding:15px;
+            overflow-y: auto;
+            height: calc(100% - 100px);
+        }
+        .cart-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-img {
+            width: 75px;
+            height: 75px;
+        }
+        .detail-box {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .price-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cart-remove {
+            background: none;
+            border: none;
+            color: red;
+            margin-top:28px;
+        }
+        .cart-remove i {
+            font-size: 16px;
+        }
+        #cart-count{
+        position: absolute;
+        background-color: #2f3542;
+        top: -5px;
+        right: 0;
+        padding: 3px;
+        height: 20px;
+        width: 20px;
+        line-height: 13px;
+        border-radius: 50%;
+        z-index: 99;
+        margin-right: 125px;
+        margin-top: 7px;
+        color:white;
+        }
+        #cart-close{
+          margin-top:20px;
+        }
+        .total{
+          margin-top:-48px;
+        }
+ 
+  .carousel img {
+  width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  overflow: hidden;
+}
+.carousel-inner {
+  padding: 1em;
+}
+
+@media screen and (min-width: 576px) {
+  .carousel-inner {
+    display: flex;
+    width: 90%;
+    margin-inline: auto;
+    padding: 1em 0;
+    overflow: hidden;
+    height: 415px;
+    box-shadow: #d9534f;
+  }
+  .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 2);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 3);
+  }
+}
+.carousel .card {
+  margin: 0 0.5em;
+  border: 0;
+  height:80%;
+}
+.carousel{
+  display:relative;
+  height:340px;
+}
+.footer {
+        background-color: #000;
+        color: #fff;
+        padding: 0px 0;
+      }
+      .footer a {
+        color: #fff;
+        transition: color 0.3s;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        color: #f8b600;
+      }
+      .footer .social a {
+        margin: 0 10px;
+        display: inline-block;
+        color: #fff;
+       transition: color 0.3s;
+      }
+      .footer .social a:hover {
+        color: #f8b600;
+      }
+      .footer .newsletter input[type="email"] {
+        padding: 4px;
+        border: none;
+        width: 70%;
+        border-radius:4px;
+        margin: 10px;
+
+      }
+      .footer .newsletter button {
+        background-color: #28a745;
+        border: none;
+        color: #fff;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+        border-radius:5px;
+        margin-left:65px;
+      }
+      .footer .newsletter button:hover {
+        background-color: #218838;
+      }
+      .foot{
+        padding:20px;
+        font-size:15px;
+      }
+      #email{
+       margin-top: 0;
+       margin-bottom:auto;
+    }
+    .text-center1{
+       padding:20px;
+       font-size:12px;
+       text-align:center;
+    }
+    .button1{
+      text-align: center;
+    }
+    .social-icons a {
+      margin-left: 15px; 
+      color:white;
+      font-size:20px;
+    }
+
+</style>
+</head>
+<body>
+  <nav class="navbar sticky-top  navbar-expand-lg" style="background-color: #fff">
+    <div class="container">
+      <a class="navbar-brand" href="#">F<span>oo</span>dy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" id="bar">
+            <a class="nav-link" href="home1.html">Home</a>
+          </li>
+          <li class="nav-item" id="bar">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item" id="bar">
+            <a class="nav-link" href="product.html">Products</a>
+          </li>
+          <li class="nav-item" id="bar">
+            <a class="nav-link" href="blogs.html">Blog</a>
+          </li>
+          <li class="nav-item" id="bar">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item" id="cart-icon">
+            <a class="nav-link" href="#">Cart <span class="cart-count" id="cart-count"style="display:none;">0</span></a>
+        </li>
+        </ul>
+      </div>
+    </div>
+    <li class="dropdown" id="drop">
+      <button class="dropbtn">Profile</button>
+      <div class="dropdown-content">
+        <a href="#" id="passwordlink">Password</a>
+        <a href="#">LogOut</a>
+      </div>
+    </li>
+        <!--</ul>
+      </div>
+    </div>-->
+  </nav>
+  
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8" id="box">
+           <img src="{% static 'asset/imagee.png' %}" id="pome">
+           <div class="heading">
+                <h1>Summer Sale</h1>
+                <h2 class="heading2">40% OFF</h2>
+                <P>Fresh Fruit
+                    100%
+                </P>
+            </div>
+        </div>
+        <div class="col-3" id="box1">
+            <img src="{% static 'asset/chesse.png' %}" alt="chesse" id="chesse">
+        </div>
+    </div>
+</div>
+<div class="container text-center mt-5">
+    <h1>Top Category</h1>
+    <div class="row">
+       <div class="col-12">
+            <div class="bg-image hover-zoom">
+                <img src="{% static 'asset/category.png'%}" alt="category" id="category">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 " id="column1">
+                <img src="{% static 'asset/allf.jpg'%}" alt="allf" id="image2">
+            <div class="col-lg-6 " id="heading1">
+                <h1>Eco-Friendly</h1>
+                    <p>Discover a vibrant array of locally sourced
+                    and eco-friendly products on our grocery web store,
+                    connecting you with sustainable choices that support both the community and the planet.</p>
+                <h3>Support Pollinators</h3>
+                    Bugs that pollinate such as bees, wasps and butterflies are the key to maintaining an eco-friendly farm. Protect them as much as possible by avoiding 
+                    using pesticides that can kill them and damage their habitats.
+                   <p>insects need habitat space and flowers to feed on. In unused areas of your farm, plant popular flowers for them based on your region.
+                    These flowers encourage bees and other pollinating insects to visit your farm, where they can pollinate your plants and encourage natural growth.
+                    It’s a sweet reward for helping your farm and the local ecosystem.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center mt-4" id="products">
+  <h2 id="heads">Our Products</h2>
+  <div id="product-container" class="row">
+      
+  </div>
+</div>
+
+<div class="cart bg-white position-absolute p-4">
+<h3 class="cart-title text-center">Cart Items</h3>
+<div class="cart-content"></div>
+<div class="total mt-0 text-right">
+    <h4>Total: <span class="total-price">Rs.0</span></h4>
+</div>
+<div class="button">
+<a href="customer.html" class="btn btn-primary btn-block mt-0 btn-buy" role="button">Place Order</button></a>
+</div>
+<button id="cart-close" class="btn btn-danger btn-block mt-0">Close</button>
+</div>
+
+
+
+
+<div class="container-fluid text-center py-3">
+  <h2>Our Customer Reviews</h2>
+  <div id="testimonialCarousel" class="carousel" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="card shadow-sm rounded-3 p-2">
+                  <div class="quotes display-6 text-body-tertiary">
+                      <i class="bi bi-quote"></i>
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">"Very rare and healthy leafy vegetable and organically grown.
+                        I ordered it and enjoyed the taste of it. Thank you Foody."</p>
+                      <div class="d-flex align-items-center pt-4">
+                          <img src="{% static 'asset/face1.png'%}" alt="face">
+                          <div>
+                              <h5 class="card-title fw-bold text-right">Ruth</h5>
+                              <span class="text-secondary text-right">Chennai</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="card shadow-sm rounded-3 p-2">
+                  <div class="quotes display-6 text-body-tertiary">
+                      <i class="bi bi-quote"></i>
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">"Very fresh and rarely available leafy vegetable is with Foody.. 
+                        I ordered and enjoyed the original taste of it</p>
+                     
+                      <div class="d-flex align-items-center pt-4">
+                          <img src="{%static 'asset/boy.png' %}" alt="face">
+                          <div>
+                              <h5 class="card-title fw-bold text-right">john</h5>
+                              <span class="text-secondary text-right">Chennai</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="card shadow-sm rounded-3 p-2">
+                  <div class="quotes display-6 text-body-tertiary">
+                      <i class="bi bi-quote"></i>
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">"Very rare and healthy leafy vegetable and organically grown.
+                        I ordered it and enjoyed the taste of it. Thank you Foody."</p>
+                      <div class="d-flex align-items-center pt-4">
+                          <img src="{% static 'asset/face1.png' %}" alt="face">
+                          <div>
+                              <h5 class="card-title fw-bold text-right">Lakshmi</h5>
+                              <span class="text-secondary text-right">Chennai</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+   </div>
+   
+   
+          
+<footer class="footer pt-20 ">
+  <div class="container-fluid">
+      <div class="row">
+          <div class=" foot col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Foody</h5>
+              <p>Foody Organics has been founded with an aim to re-introduce the traditional practices of organic farming with a blend of modern technologies and sustainable agricultural practices.</p>
+          </div>
+          <div class=" foot col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Address</h5>
+              <ul class="list-unstyled">
+                  <li><i class="bi bi-geo-alt-fill"></i> 123 Street, chennai, TamilNadu</li>
+                  <li><i class="fa fa-phone"></i> +012 345 67890</li>
+                  <li><i class="fa fa-envelope"></i> info@example.com</li>
+              </ul>
+          </div>
+          <div class="foot col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Quick Links</h5>
+              <ul class="list-unstyled py-2">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Our Services</a></li>
+                  <li><a href="#">Terms & Condition</a></li>
+                  <li><a href="#">Support</a></li>
+              </ul>
+          </div>
+          <div class="foot col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Newsletter</h5>
+              <div class="newsletter">
+                  <p>A way to reach out to you directly.</p>
+                  <input type="email" id="email" placeholder="Your email">
+                  <button type="button" id="button1">SignUp</button>
+              </div>
+              <div class="d-flex align-items-center social-icons mt-5">
+                <p class="mb-0 me-2">Follow us:</p>
+                <a href="#" class="d-flex align-items-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="d-flex align-items-center"><i class="bi bi-instagram"></i></a>
+              </div>
+    
+          </div>
+      </div>
+  </div>
+  <div class="text-center1 py-3">© FOODY, All Right Reserved.</div>
+ 
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', loadProducts);
+
+const products = [
+    { id: 1,
+      title: 'LETTUCE',
+      price: 'Rs.45',
+      imgSrc: "{% static 'asset/lettuce.jpg' %}"
+    },
+    
+
+    { id: 2, 
+      title:'RADDISH',
+       price: 'Rs.100',
+      imgSrc: "{% static 'asset/raddish.jpg' %}"
+    },
+    { id: 3,
+       title: 'CHEESE', 
+       price: 'Rs.230',
+        imgSrc: "{% static 'asset/chessee.jpg'%}"
+    },
+    { id: 4, 
+      title: 'CHERRY',
+       price: 'Rs.180',
+      imgSrc:"{% static 'asset/cherry.jpg' %}"
+    },
+    { id: 5, 
+      title: 'BRINJAL',
+       price: 'Rs.60', 
+       imgSrc: "{% static 'asset/brinjal.jpg' %}"
+    },
+    { id: 6,
+       title: 'AVOCADO',
+        price: 'Rs.80', 
+        imgSrc: "{%static 'asset/avacado.jpg' %}"
+   },
+    { id: 7,
+       title: 'MEAT', 
+       price: 'Rs.140',
+        imgSrc: "{% static 'asset/meat.jpg' %}"
+    },
+    { id: 8, 
+      title: 'CORN',
+       price: 'Rs.45',
+        imgSrc:"{% static 'asset/corn.jpg' %}"
+    },
+    { id: 9,
+       title: 'BERRIES',
+        price: 'Rs.130',
+         imgSrc: "{% static 'asset/berries.jpg' %}"
+    },
+    { id: 10,
+       title: 'CAPSICUM',
+        price: 'Rs.80', 
+        imgSrc: "{% static 'asset/capci.jpg' %}"
+    },
+    { id: 11, 
+      title: 'MANGO',
+       price: 'Rs.140', 
+       imgSrc: "{%static 'asset/mango.jpg' %}"
+    },
+    { id: 12,
+       title: 'CABBAGE',
+        price: 'Rs.80', 
+        imgSrc: "{%static 'asset/cabbage.jpg' %}"
+    },
+];
+
+function loadProducts() {
+    const productContainer = document.getElementById('product-container');
+    products.forEach((product, index) => {
+        const productElement = createProductCard(product);
+        productContainer.innerHTML += productElement;
+
+      
+        if ((index + 1) % 4 === 0) {
+            productContainer.innerHTML += `<div class="w-100 d-none d-md-block"></div>`;
+        }
+    });
+
+    loadContent();  
+}
+
+function createProductCard(product) {
+    return `
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+            <div class="card h-100">
+                <img src="${product.imgSrc}" class="card-img-top" alt="${product.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${product.title}</h5>
+                    <p class="card-text">${product.price}</p>
+                    <button type="button" class="button add-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+
+  function loadContent() {
+      let btnRemove = document.querySelectorAll('.cart-remove');
+      btnRemove.forEach((btn) => {
+          btn.addEventListener('click', removeItem);
+      });
+
+      let qtyElements = document.querySelectorAll('.cart-quantity');
+      qtyElements.forEach((input) => {
+          input.addEventListener('change', changeQty);
+      });
+
+      let cartBtns = document.querySelectorAll('.add-cart');
+      cartBtns.forEach((btn) => {
+          btn.addEventListener('click', addCart);
+      });
+
+      updateTotal();
+  }
+
+  function removeItem() {
+      if (confirm('Are You Sure to Remove?')) {
+          let title = this.parentElement.querySelector('.cart-food-title').innerHTML;
+          itemList = itemList.filter(el => el.title != title);
+          this.parentElement.remove();
+          loadContent();
+      }
+  }
+
+  function changeQty() {
+      if (isNaN(this.value) || this.value < 1) {
+          this.value = 1;
+      }
+      updateTotal();
+  }
+
+  let itemList = [];
+
+  function addCart() {
+      let food = this.closest('.card');
+      let title = food.querySelector('.card-title').innerText;
+      let price = food.querySelector('.card-text').innerText;
+      let imgSrc = food.querySelector('.card-img-top').src;
+
+      let newProduct = { title, price, imgSrc };
+
+      if (itemList.find((el) => el.title == newProduct.title)) {
+          alert("Product Already added in Cart");
+          return;
+      } else {
+          itemList.push(newProduct);
+      }
+
+      let newProductElement = createCartProduct(title, price, imgSrc);
+      let element = document.createElement('div');
+      element.innerHTML = newProductElement;
+      let cartBasket = document.querySelector('.cart-content');
+      cartBasket.append(element);
+      loadContent();
+  }
+
+  function createCartProduct(title, price, imgSrc) {
+      return `
+      <div class="cart-box d-flex justify-content-between align-items-center my-2 p-2 border-bottom"> 
+          <img src="${imgSrc}" class="cart-img img-fluid" style="width: 75px; height: 75px;">
+          <div class="detail-box">
+              <h6 class="cart-food-title text-capitalize">${title}</h6>
+              <div class="price-box d-flex justify-content-between">
+                  <div class="cart-price">${price}</div>
+                  <input type="number" value="1" class="cart-quantity form-control w-25 text-center">
+              </div>
+          </div>
+          <button class="cart-remove btn btn-danger btn-sm">
+              <i class="fas fa-trash-alt"></i>
+          </button>
+      </div>`;
+  }
+
+  function updateTotal() {
+      const cartItems = document.querySelectorAll('.cart-box');
+      const totalValue = document.querySelector('.total-price');
+
+      let total = 0;
+
+      cartItems.forEach(product => {
+          let priceElement = product.querySelector('.cart-price');
+          let price = parseFloat(priceElement.innerHTML.replace("Rs.", ""));
+          let qty = product.querySelector('.cart-quantity').value;
+          total += (price * qty);
+      });
+
+      totalValue.innerHTML = 'Rs.' + total;
+
+      const cartCount = document.querySelector('.cart-count');
+      let count = itemList.length;
+      cartCount.innerHTML = count;
+
+      if (count == 0) {
+          cartCount.style.display = 'none';
+      } else {
+          cartCount.style.display = 'block';
+      }
+  }
+
+  const btnCart = document.querySelector('#cart-icon');
+  const cart = document.querySelector('.cart');
+  const btnClose = document.querySelector('#cart-close');
+
+  btnCart.addEventListener('click', () => {
+      cart.style.right = '0';
+  });
+
+  btnClose.addEventListener('click', () => {
+      cart.style.right = '-100%';
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

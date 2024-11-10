@@ -32,7 +32,7 @@
             <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
           </li>
           <li class="nav-item" id="bar">
-            <a class="nav-link" href="fruit.html">Products</a>
+            <a class="nav-link" href="{% url 'product' %}">Products</a>
           </li>
           <li class="nav-item" id="bar">
             <a class="nav-link" href="blogs.html">Blogs</a>
@@ -51,9 +51,9 @@
           <!--<li class="nav-item" id="bar">
             <a class="nav-link" href="#"><i class="fas fa-user icon"></i></a>
           </li>-->
-          <li class="nav-item" id="bar">
-            <a class="nav-link" href="#">Cart</a>
-          </li>
+          <li class="nav-item" id="cart-icon">
+            <a class="nav-link" href="#">Cart <span class="cart-count" id="cart-count"style="display:none;">0</span></a>
+        </li>
         </ul>
       </div>
     </div>

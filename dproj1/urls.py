@@ -5,7 +5,7 @@ from django.urls import path
 from . import views
 from .views import (
     loginView, forgot_passwordView, reset_passwordView, registerprocessView, 
-    changepasswordView,logoutView,aboutusView,home1View,editprofileView, profileView
+    changepasswordView,logoutView,aboutusView,home1View,editprofileView, profileView,productView,productsView
 )
 
 urlpatterns = [
@@ -20,6 +20,8 @@ urlpatterns = [
     path('editprofile/',editprofileView.as_view(), name='editprofile'), 
     path('logout/', logoutView.as_view(), name='logout'), 
     path('profile/', profileView.as_view(), name='profile'),
+    path('product/',productView.as_view(),name='product'),
+    path('products/',productsView.as_view(),name='products'),
     
 ]
 

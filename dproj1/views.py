@@ -289,6 +289,14 @@ class aboutusView(View):
     def get(self, request):
         return render(request, 'aboutus.html')
 
+class productView(View):
+    def get(self,request):
+        return render(request,'product.html')
+
+class productsView(View):
+    def get(self,request):
+        return render(request,'products.html')
+
     
   
 
